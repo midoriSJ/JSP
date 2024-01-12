@@ -1,0 +1,53 @@
+20240112 JSP
+
+get : 주소 표시줄에 보내지는 데이터 전부 공개
+그러므로 보안에 취약하다.
+다만, 구현하기가 쉬워서 보안과 관련없는 페이지에서 많이 활용
+
+post : 주소 표시줄에 데이터가 표시되지 않음.
+즉, 보안에 강하다.
+다만, 서버 입장에서는 처리 방법 때문에 부담스러워한다.
+
+JSP 태그 별 기능
+<%-- --%> : 주석
+<%@   %> : 지시자
+<%!     %> : 선언
+<%=    %> : 표현식
+<%      %> : 스크립트릿
+<jsp : action> </jsp : action> : 액션 태그
+
+<title></title> : 제목
+<body></body> : 구현부
+<input type = "text"	       > : 텍스트 입력부
+	   = "checkbox"> : 체크박스 입력부
+<html></html> : html로 구성되었다는 뜻
+<div></div> : 페이지를 나눈다는 뜻(영역구분)
+-> align = 정렬
+<form action = "~" method = "get / post"></form> : ~서블릿 찾기
+<table></table> : 표 생성
+<tr></tr> : 테이블 상의 줄
+<th></th> : 테이블 헤더
+<td></td> : 테이블 데이터 들어가는 곳
+<hr> : 선(단독 태그이므로 종료태그 x)
+-> width ~% : 반응형
+              ~px : 고정형
+<h2></h2> : 글자 크기
+<br> : 한 줄 공백
+
+<input type = "submit"> : form에 입력한 자료를 서버에 전송
+	   = "reset"   > : form에 입력한 자료를 모두 지우기
+-> value : 버튼에 들어갈 글자
+
+jsp 파일에서 get 기능 구현하는 법
+package 만들고 new servlet -> url mapping 제대로 해주고 생성
+
+Servlet -> 처리기
+주기
+생성(초기화) : init
+서비스 : service
+doget, dopost
+destroy
+=> Servlet 생명 주기
+
+response.setContentType : 내 서버는 UTF-8인데 상대방 웹 브라우저는 다른 방식일 수 있으므로
+response 객체에 글자깨짐 방지 코드를 같이 보내준다.
