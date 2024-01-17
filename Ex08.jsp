@@ -8,7 +8,7 @@
 
 <script type = "text/javascript">
 	// 유효성 검사
-	function validate() {
+	function login() {
 		if (std.name.value == "") {
 			alert("이름을 입력해주세요.")
 			std.name.focus()
@@ -34,7 +34,7 @@
 		}
 		
 		std.method = "post"
-		std.method = "add"
+		std.action = "login"
 		std.submit()
 		
 		
@@ -83,7 +83,7 @@
 				
 				<tr>
 					<td colspan = "2" align = "center">
-						<input type = "button" onclick = "validate()" value = "등록">&nbsp;
+						<input type = "button" onclick = "login()" value = "등록">
 						<input type = "reset" value = "수정">
 					</td>
 				</tr>
